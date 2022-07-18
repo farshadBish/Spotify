@@ -1,0 +1,135 @@
+body {
+  overflow-x: hidden;
+}
+.navbar {
+  width: 100%;
+  min-width: 450px;
+  height: 12vh;
+  text-align: center;
+  border-bottom: 0.3px solid gray;
+}
+#logo {
+  height: 55px;
+  margin: auto;
+}
+.content-div {
+  min-width: 450px;
+  width: 100%;
+}
+.facebook {
+  background-color: #3b5998;
+  color: rgb(217, 217, 217);
+}
+.facebook:hover {
+  color: white;
+}
+.apple {
+  background-color: black;
+  color: rgb(217, 217, 217);
+}
+.apple:hover {
+  color: white;
+}
+.google {
+  border: 1px solid rgb(159, 159, 159);
+
+  color: rgb(61, 61, 61);
+}
+.google:hover {
+  border: 1px solid rgb(106, 106, 106);
+  color: black;
+}
+.hr-line-left {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #747474;
+}
+.hr-line-right {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #747474;
+}
+.logginBtn {
+  padding: 10px 65px;
+  color: rgb(235, 235, 235);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #47b850;
+  border-radius: 40px;
+}
+.logginBtn:hover {
+  transform: scale(105%);
+  /* padding: 15px 36px; */
+  transition: 0.2s ease-in-out;
+  color: rgb(255, 255, 255);
+  background-color: #47b850;
+  border: none;
+  box-shadow: none;
+}
+.forget {
+  color: #3da245;
+}
+.logginBtn:focus {
+  transform: scale(100%);
+  box-shadow: none;
+  color: rgb(255, 255, 255);
+  background-color: #47b850;
+}
+.sportfy {
+  min-width: 100%;
+  border: 1px solid rgb(159, 159, 159);
+
+  color: rgb(61, 61, 61);
+  padding: 10px 0 10px 0;
+}
+.sportfy:hover {
+  border: 1px solid rgb(106, 106, 106);
+  color: black;
+}
+
+.apple,
+.facebook,
+.google,
+.sportfy {
+  padding: 7px 0;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+.apple:focus,
+.facebook:focus,
+.google:focus,
+.sportfy:focus {
+  border: 3px solid black;
+  box-shadow: none;
+}
+.input {
+  height: 40px;
+}
+.input:focus {
+  outline: #800000;
+  border: 3px solid black;
+  box-shadow: none;
+}
+
+.checkBox:focus {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #800000;
+}
+.privacyDiv {
+  justify-content: center;
+}
+.privacy {
+  font-size: 11px;
+}
+.alertDiv {
+  border: 1px solid #c14e4e;
+  color: #c14e4e;
+  padding: 5px;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 5px;
+}

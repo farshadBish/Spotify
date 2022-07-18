@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./pages/login-page.css" />
+    <title>Sportify</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img id="logo" src="./asset/Spotify_Logo_CMYK_Black.png" alt="" />
+    </div>
+    <div class="row">
+      <div class="col-4 m-auto content-div pt-4">
+        <div class="row alertDiv invisible"></div>
+        <p class="font-weight-bold text-center my-2">
+          To continue, log in to Spotify.
+        </p>
+        <button
+          type="button"
+          class="btn btn-lg btn-block rounded-pill facebook my-3"
+        >
+          <i class="bi bi-facebook mx-2"></i> CONTUNUE WITH FACEBOOK
+        </button>
+        <button
+          type="button"
+          class="btn btn-lg btn-block rounded-pill apple my-3"
+        >
+          <i class="bi bi-apple mx-2"></i>CONTUNUE WITH APPLE
+        </button>
+        <!-- <button
+          type="button"
+          class="btn btn-lg btn-block rounded-pill google my-2"
+        >
+          <i class="bi bi-google mx-2"></i> CONTUNUE WITH GOOGLE
+        </button> -->
+        <div class="d-flex align-items-center justify-content-around py-3">
+          <div class="col-5 hr-line-left"></div>
+          <small class="col-2 text-center font-weight-bold">OR</small>
+          <div class="col-5 hr-line-right"></div>
+        </div>
+
+        <div class="input-group flex-nowrap mb-2">
+          <input
+            id="userName"
+            type="text"
+            class="form-control input"
+            placeholder="Email address or username"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+
+        <div class="input-group flex-nowrap">
+          <input
+            id="password"
+            type="password"
+            class="form-control input"
+            placeholder="Password"
+            aria-label="password"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+        <div class="col-12 d-flex my-3 p-0 align-items-center">
+          <div class="col-6 p-0">
+            <input
+              class="checkBox text-success"
+              type="checkbox"
+              aria-label="Checkbox for following text input"
+            />
+            <label for="checkbox">Remember me</label>
+          </div>
+
+          <div class="col-6 text-right p-0" id="loginDiv">
+            <a
+              onclick="logIn()"
+              type="button"
+              class="btn btn-success rounded-pill logginBtn"
+              id="logginBtn"
+            >
+              LOG IN
+            </a>
+          </div>
+        </div>
+        <p class="text-center forget">Forgot your password?</p>
+        <hr />
+        <h6 class="text-center">Don't have an account?</h6>
+        <div class="d-flex my-3 text-center P-0">
+          <button
+            type="button"
+            class="btn btn-lg btn-block rounded-pill sportfy"
+          >
+            SIGN UP FOR SPOTIFY
+          </button>
+        </div>
+        <hr />
+        <div class="row privacyDiv">
+          <small class="text-secondary privacy"
+            >If you click "Log in with facebook" and are not a Sportify user,
+            you will be registered and</small
+          >
+          <small class="text-secondary privacy"
+            >you agree to Sportyfy's
+            <span class="text-success privacy"
+              >Terms & Condition and Privacy Policy</span
+            ></small
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <!-- <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Please signup</h5>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const users = [
+        {
+          userId: "011",
+          name: "Simon",
+          password: "123456",
+          avatar:
+            "https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg",
+        },
+        {
+          userId: "012",
+          name: "Farshad",
+          password: "123456",
+          avatar:
+            "https://nientepopcorn.b-cdn.net/persone-img/big/tom-hardy-2524.jpg",
+        },
+        {
+          userId: "013",
+          name: "Sidath",
+          password: "123456",
+          avatar:
+            "https://s3-eu-west-1.amazonaws.com/static.screenweek.it/artist/7370.jpg",
+        },
+      ]
+      // login function-----------------
+      const logIn = () => {
+        const userName = document.getElementById("userName").value.toLowerCase()
+        const password = document.getElementById("password").value
+        const loginDiv = document.getElementById("loginDiv")
+        const loginBtn = document.getElementById("logginBtn")
+        const alertDiv = document.querySelector(".alertDiv")
+        //console.log(userName + " " + password)
+        users.forEach((user) => {
+          if (
+            user.name.toLowerCase() == userName &&
+            user.password == password
+          ) {
+            loginBtn.href = `./home-page.html?userId=${user.userId}`
+            alertDiv.classList.add("d-none")
+            console.log(user)
+          } else if (userName == "" && password == "") {
+            alertDiv.classList.remove("invisible")
+            alertDiv.classList.add("visible")
+            alertDiv.innerHTML = "Please enter your username and password"
+            console.log("wrong")
+          } else {
+            alertDiv.classList.remove("invisible")
+            alertDiv.classList.add("visible")
+            alertDiv.innerHTML = "Please check your username and password"
+            console.log("Please signup")
+          }
+        })
+      }
+
+      // Modal pop up-----------------------------------
+      $("#myModal").on("shown.bs.modal", function () {
+        $("#myInput").trigger("focus")
+      })
+    </script>
+  </body>
+</html>
